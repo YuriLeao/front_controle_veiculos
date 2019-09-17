@@ -1,0 +1,27 @@
+<input type="text" (input)="this.inserirPlaca($event.target.value)"/>
+<p></p>
+<input type="text" (input)="this.inserirData($event.target.value)"/>
+<button (click)="this.buscar()">
+  Buscar
+</button>
+  <table mat-table>
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements"  scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let i of poiTempos">
+        <th scope="row">{{i.nome}}</th>
+        <td>{{i.placa}}</td>
+        <td>{{i.dataPosicao}}</td>
+        <td>{{i.tempo}}</td>
+        <td>{{i.latitudePOI}}</td>
+        <td>{{i.longitudePOI}}</td>
+        <td>{{i.latitude}}</td>
+        <td>{{i.longitude}}</td>
+        <td>{{i.raio}}</td>
+        <td>{{i.distancia}}</td>
+      </tr>
+    </tbody>
+  </table>
