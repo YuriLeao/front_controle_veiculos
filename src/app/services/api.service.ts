@@ -10,10 +10,10 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   public getPOITempo(): Observable<any> {
-    return this.http.get(`http://localhost:8080/poitempo/poitempos/ / /`);
+    return this.http.get(`https://api-controle-veiculos.herokuapp.com/poitempo/poitempos/ / /`);
   }
 
   public getPOITempoParam(placa: string, data: string): Observable<any> {
-    return this.http.get(`http://localhost:8080/poitempo/poitempos/`+placa+`/`+data+`/`);
+    return this.http.get(`https://api-controle-veiculos.herokuapp.com/poitempo/poitempos/`+placa+`/`+data+`/`);
   }
 }
